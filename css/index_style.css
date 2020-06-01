@@ -35,7 +35,6 @@ h5 {
 }
 
 p {
-    font-weight: 300;
     color: #777;
 }
 
@@ -135,9 +134,7 @@ nav .container {
 }
 
 .home .home-content {
-    overflow: hidden;
-    position: relative;
-    top: 30%;
+    margin: auto;
 }
 
 .home .home-content h1 {
@@ -168,29 +165,27 @@ nav .container {
 }
 
 .home .down-icon i {
+    color: #fff;
     position: relative;
-    animation: down-icon 0.65s infinite alternate-reverse;
-    -webkit-animation: down-icon 0.65s infinite alternate-reverse;
+    animation: down-icon 0.3s infinite alternate-reverse;
+    -webkit-animation: down-icon 0.3s infinite alternate-reverse;
 }
 
 @keyframes down-icon {
     0% {
+        top: -9%;
+    }
+    25% {
+        top: -6%;
+    }
+    50% {
         top: -3%;
     }
-    20% {
-        top: -2%;
-    }
-    40% {
-        top: -1%;
-    }
-    60% {
+    75% {
         top: 0%;
     }
-    80% {
-        top: 1%;
-    }
     100% {
-        top: 2%;
+        top: 3%;
     }
 }
 
@@ -381,16 +376,16 @@ footer p {
         background-position: 75%;
     }
     .home .home-content {
-        top: 30%;
+        padding-top: 7%;
     }
     .home .home-content h1 {
-        font-size: 36px;
+        font-size: 22px;
     }
     .home .home-content h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
     .home .home-content .row2 {
-        padding-top: 10%;
+        padding-top: 20%;
     }
     .portfolio .btn {
         padding: 5px 7px;
