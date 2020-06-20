@@ -1,8 +1,8 @@
 $(document).ready(function () {
-    const lis = document.querySelectorAll('.navbar li');
-    // console.log(lis);
+    function toggleCurrentClass() {
+        const lis = document.querySelectorAll('.navbar li');
+        // console.log(lis);
 
-    window.addEventListener('scroll', function (e) {
         // console.log(window.scrollY);
         for (let i = 0; i < lis.length; i++) {
             lis[i].classList.remove("current");
@@ -22,7 +22,10 @@ $(document).ready(function () {
                 lis[4].classList.add("current");
             }
         }
-    });
+    }
+    window.addEventListener('scroll', toggleCurrentClass);
+
+    //  window.removeEventListener('scroll', toggleCurrentClass);
 
     $(".navbar-nav li").click(function () {
         $(".navbar-nav li").not($(this)).removeClass("current");
