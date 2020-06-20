@@ -278,11 +278,6 @@ nav .container {
     margin: 0px 5px;
 }
 
-.portfolio .btn-portfolio-all {
-    color: #fff;
-    background-color: #ec3237;
-}
-
 .portfolio .btn-portfolio {
     color: #444;
     border: 2px solid #ccc;
@@ -291,6 +286,17 @@ nav .container {
 .portfolio .btn-portfolio:hover {
     border: 2px solid #ec3237;
     color: #ec3237;
+}
+
+.portfolio .clicked {
+    color: #fff;
+    background-color: #ec3237;
+    border: 2px solid #ec3237;
+}
+
+.portfolio .clicked:hover {
+    color: #fff;
+    /* background-color: #ec3237; */
 }
 
 .portfolio .portfolio-item {

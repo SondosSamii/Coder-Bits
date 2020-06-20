@@ -1,18 +1,33 @@
 $(document).ready(function () {
-    $(".navbar-nav li").click(function () {
-        $(this).addClass("current");
-        $(".navbar-nav li").not($(this)).removeClass("current");
+    const lis = document.querySelectorAll('.navbar li');
+    // console.log(lis);
+
+    window.addEventListener('scroll', function (e) {
+        // console.log(window.scrollY);
+        for (let i = 0; i < lis.length; i++) {
+            lis[i].classList.remove("current");
+            if (window.scrollY > 0 && window.scrollY < 620) {
+                lis[0].classList.add("current");
+            }
+            else if (window.scrollY >= 620 && window.scrollY < 1800) {
+                lis[1].classList.add("current");
+            }
+            else if (window.scrollY >= 1800 && window.scrollY < 3020) {
+                lis[2].classList.add("current");
+            }
+            else if (window.scrollY >= 3020 && window.scrollY < 4800) {
+                lis[3].classList.add("current");
+            }
+            else if (window.scrollY >= 4800) {
+                lis[4].classList.add("current");
+            }
+        }
     });
 
-    // window.addEventListener('scroll', function (e) {
-    //     var scroll = this.window.scrollY;
-    //     console.log(scroll);
-    //     if (scroll == 600) {
-    //         console.log(true);
-    //         $(".navbar-nav:nth-child(2)").addClass("current");
-    //         $(".navbar-nav:nth-child(2)").not($(this)).removeClass("current");
-    //     }
-    // });
+    $(".navbar-nav li").click(function () {
+        $(".navbar-nav li").not($(this)).removeClass("current");
+        $(this).addClass("current");
+    });
 
     $('.counter h3').each(function () {
         $(this).prop('Counter', 0).animate({
