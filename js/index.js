@@ -6,26 +6,26 @@ $(document).ready(function () {
         // console.log(window.scrollY);
         for (let i = 0; i < lis.length; i++) {
             lis[i].classList.remove("current");
-            if (window.scrollY >= 0 && window.scrollY < 620) {
+            if (window.scrollY >= 0 && window.scrollY < 600) {
                 lis[0].classList.add("current");
             }
-            else if (window.scrollY >= 620 && window.scrollY < 1800) {
+            else if (window.scrollY >= 600 && window.scrollY < 1700) {
                 lis[1].classList.add("current");
             }
-            else if (window.scrollY >= 1800 && window.scrollY < 3020) {
+            else if (window.scrollY >= 1700 && window.scrollY < 2900) {
                 lis[2].classList.add("current");
             }
-            else if (window.scrollY >= 3020 && window.scrollY < 4800) {
+            else if (window.scrollY >= 2900 && window.scrollY < 4750) {
                 lis[3].classList.add("current");
             }
-            else if (window.scrollY >= 4800) {
+            else if (window.scrollY >= 4750) {
                 lis[4].classList.add("current");
             }
         }
     }
-    window.addEventListener('scroll', toggleCurrentClass);
+    window.addEventListener('scroll', toggleCurrentClass, true);
 
-    //  window.removeEventListener('scroll', toggleCurrentClass);
+    window.removeEventListener('scroll', toggleCurrentClass, false);
 
     $(".navbar-nav li").click(function () {
         $(".navbar-nav li").not($(this)).removeClass("current");
