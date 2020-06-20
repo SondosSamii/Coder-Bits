@@ -6,7 +6,7 @@ $(document).ready(function () {
         // console.log(window.scrollY);
         for (let i = 0; i < lis.length; i++) {
             lis[i].classList.remove("current");
-            if (window.scrollY > 0 && window.scrollY < 620) {
+            if (window.scrollY >= 0 && window.scrollY < 620) {
                 lis[0].classList.add("current");
             }
             else if (window.scrollY >= 620 && window.scrollY < 1800) {
