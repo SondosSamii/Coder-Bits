@@ -27,11 +27,6 @@ $(document).ready(function () {
 
     window.removeEventListener('scroll', toggleCurrentClass, false);
 
-    $(".navbar-nav li").click(function () {
-        $(".navbar-nav li").not($(this)).removeClass("current");
-        $(this).addClass("current");
-    });
-
     $('.counter h3').each(function () {
         $(this).prop('Counter', 0).animate({
             Counter: $(this).text()
