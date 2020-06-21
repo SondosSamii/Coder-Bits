@@ -1,20 +1,19 @@
-window.addEventListener('DOMContentLoaded', function () {
-    window.addEventListener('scroll', toggleCurrentClass, true);
+window.addEventListener('scroll', toggleCurrentClass, true);
 
-    window.removeEventListener('scroll', toggleCurrentClass, false);
+window.removeEventListener('scroll', toggleCurrentClass, false);
 
-    $('.counter h3').each(function () {
-        $(this).prop('Counter', 0).animate({
-            Counter: $(this).text()
-        }, {
-            duration: 4000,
-            easing: 'swing',
-            step: function (now) {
-                $(this).text(Math.ceil(now));
-            }
-        });
+$('.counter h3').each(function () {
+    $(this).prop('Counter', 0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 4000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
     });
-}, true);
+});
+
 
 function toggleCurrentClass() {
     const lis = document.querySelectorAll('.navbar li');
