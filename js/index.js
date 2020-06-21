@@ -1,6 +1,12 @@
-window.addEventListener('scroll', toggleCurrentClass, true);
+const t0 = performance.now();
 
+window.addEventListener('scroll', toggleCurrentClass, true);
 window.removeEventListener('scroll', toggleCurrentClass, false);
+
+const t1 = performance.now()
+console.log(`Add & Remove Scroll EventListener takes ${(t1 - t0).toFixed(4)}`);
+
+const counterStart = performance.now();
 
 $('.counter h3').each(function () {
     $(this).prop('Counter', 0).animate({
@@ -14,6 +20,8 @@ $('.counter h3').each(function () {
     });
 });
 
+const counterEnd = performance.now();
+console.log(`The Counter code takes ${(counterEnd - counterStart).toFixed(4)}`);
 
 function toggleCurrentClass() {
     const lis = document.querySelectorAll('.navbar li');
@@ -39,3 +47,4 @@ function toggleCurrentClass() {
         }
     }
 }
+
