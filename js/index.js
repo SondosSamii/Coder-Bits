@@ -1,26 +1,12 @@
 const t0 = performance.now();
-
 window.addEventListener('scroll', toggleCurrentClass, true);
 window.removeEventListener('scroll', toggleCurrentClass, false);
-
 const t1 = performance.now()
 console.log(`Add & Remove Scroll EventListener takes ${(t1 - t0).toFixed(4)}`);
 
 const counterStart = performance.now();
-
-setTimeout(function counter() {
-    $('.counter h3').each(function () {
-        $(this).prop('Counter', 0).animate({
-            Counter: $(this).text()
-        }, {
-            duration: 4000,
-            easing: 'swing',
-            step: function (now) {
-                $(this).text(Math.ceil(now));
-            }
-        });
-    });
-}, 0);
+setTimeout(counter, 0);
+clearTimeout(counter, 0);
 const counterEnd = performance.now();
 console.log(`The Counter code takes ${(counterEnd - counterStart).toFixed(4)}`);
 
@@ -49,3 +35,16 @@ function toggleCurrentClass() {
     }
 }
 
+function counter() {
+    $('.counter h3').each(function () {
+        $(this).prop('Counter', 0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 4000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+}
