@@ -2,13 +2,13 @@ const t0 = performance.now();
 window.addEventListener('scroll', toggleCurrentClass, true);
 window.removeEventListener('scroll', toggleCurrentClass, false);
 const t1 = performance.now()
-console.log(`Add & Remove Scroll EventListener takes ${(t1 - t0).toFixed(4)}`);
+console.log(`Add & Remove Scroll EventListeners & toggleCurrentClass() takes ${(t1 - t0).toFixed(4)}`);
 
 const counterStart = performance.now();
 setTimeout(counter, 0);
 clearTimeout(counter, 0);
 const counterEnd = performance.now();
-console.log(`The Counter code takes ${(counterEnd - counterStart).toFixed(4)}`);
+console.log(`Set & Clear Timeout & Counter() takes ${(counterEnd - counterStart).toFixed(4)}`);
 
 function toggleCurrentClass() {
     const lis = document.querySelectorAll('.navbar li');
