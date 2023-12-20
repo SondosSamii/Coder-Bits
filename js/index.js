@@ -12,9 +12,7 @@ console.log(`Set & Clear Timeout & Counter() takes ${(counterEnd - counterStart)
 
 function toggleCurrentClass() {
     const lis = document.querySelectorAll('.navbar li');
-    // console.log(lis);
-
-    // console.log(window.scrollY);
+    
     for (let i = 0; i < lis.length; i++) {
         lis[i].classList.remove("current");
         if (window.scrollY >= 0 && window.scrollY < 614) {
