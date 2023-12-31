@@ -116,7 +116,7 @@ nav .container {
     color: rgb(236, 51, 55);
 }
 
-.navbar-dark .navbar-nav .current a {
+.navbar-dark .navbar-nav .current {
     color: rgb(236, 51, 55);
     border-bottom: 2px solid rgb(236, 51, 55);
 }
